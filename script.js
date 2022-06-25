@@ -31,7 +31,7 @@ function fazerPergunta() {
     elementoBotao.setAttribute("disabled", true)
     const pergunta = "<div/>" + elementoPergunta.value + "</div>"
     //Gerador de número aleatório baseado no 'respostas.length', ou seja, no número total de respostas que se encontram na respectiva array.
-    const numeroAleatorio = (Math.floor(Math.random() * respostas.length))
+    const numeroAleatorio = Math.floor(Math.random() * (respostas.length + 0.1))
     elementoResposta.style.opacity = 1;
     elementoResposta.innerHTML = pergunta + respostas[numeroAleatorio]    
     setTimeout(function(){
